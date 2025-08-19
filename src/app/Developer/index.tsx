@@ -50,7 +50,7 @@ export function Developer({ navigation }: any) {
           </View>
         </ScrollView>
       )}
-      <Button title="Ver repositórios" activeOpacity={0.8} />
+      <Button title="Ver repositórios" activeOpacity={0.8} onPress={() => navigation.navigate("repositories")} />
     </View>
   );
 }

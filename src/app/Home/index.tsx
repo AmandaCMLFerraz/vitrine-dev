@@ -18,7 +18,7 @@ export function Home({ navigation }: DrawerRoutesProps<"home">) {
   const handleSearch = () => {
     if (username.trim()) {
       dispatch(fetchUser(username));
-      navigation.navigate("user");
+      navigation.navigate("developer");
     }
   };
 

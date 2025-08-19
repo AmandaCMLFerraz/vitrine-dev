@@ -13,7 +13,6 @@ const initialState: UserState = {
   error: null,
 };
 
-// Async thunk para buscar usuário no GitHub
 export const fetchUser = createAsyncThunk(
   "user/fetchUser",
   async (username: string, { rejectWithValue }) => {
