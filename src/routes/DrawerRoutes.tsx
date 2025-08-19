@@ -3,13 +3,16 @@ import {
   DrawerScreenProps,
 } from "@react-navigation/drawer";
 import { Home } from "../app/Home";
+import { User } from "../app/User";
 import MaterialIcons from "@react-native-vector-icons/material-icons";
+
 
 export type DrawerRoutesList = {
   home: undefined;
+  user: undefined | { id: string }
 };
 
-export type DrawerProps<T extends keyof DrawerRoutesList> =
+export type DrawerRoutesProps<T extends keyof DrawerRoutesList> =
   DrawerScreenProps<DrawerRoutesList, T>;
 
 const Drawer = createDrawerNavigator<DrawerRoutesList>();
@@ -17,7 +20,7 @@ const Drawer = createDrawerNavigator<DrawerRoutesList>();
 export function DrawerRoutes() {
   return (
     <Drawer.Navigator
-      initialRouteName="home"
+      initialRouteName="user"
       screenOptions={{
         headerShown: false,
         drawerActiveTintColor: "#000",
@@ -25,8 +28,8 @@ export function DrawerRoutes() {
       }}
     >
       <Drawer.Screen
-        name="home"
-        component={Home}
+        name="user"
+        component={User}
         options={{
           drawerLabel: "Início",
           drawerIcon: ({ color, size }) => (

@@ -1,7 +1,9 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  image: {
-    resizeMode: "cover",
+  title: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#000",
   },
 });
